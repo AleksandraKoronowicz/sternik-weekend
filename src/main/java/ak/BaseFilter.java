@@ -44,4 +44,5 @@ public class BaseFilter implements Filter, Serializable {
 
 		LOG.info("Wy doFilter 1");
 	}
+}
 
