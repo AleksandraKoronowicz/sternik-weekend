@@ -2,12 +2,13 @@ package projectapp.entities;
 
 public enum Status {
     
-    NOWA("Nowa"), 
-    DO_SPRZEDANIA("Do sprzedania"),
-    DUBLET("Dublet");
+    NEW("Nowe zadanie"), 
+    DO_ZROBIENIA("Do zrobienia"),
+    ANULOWANE("anulowane"),
+    ZROBIONE("zakończone");
     
     
-    public static final Status[] ALL = { NOWA, DO_SPRZEDANIA, DUBLET };
+    public static final Status[] ALL = { NEW, DO_ZROBIENIA, ANULOWANE,ZROBIONE };
     
     
     private final String name;
