@@ -72,6 +72,10 @@
 		</plugins>
 	</build>
 	<dependencies>
+	
+	
+	
+	
 		<!-- Servlet API -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -119,11 +123,7 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.4-1201-jdbc4</version>
 		</dependency>
-		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-			<version>2.6.0</version>
-		</dependency>
+		
 		<!-- -->
 		<dependency>
 			<groupId>javax.annotation</groupId>
