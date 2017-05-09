@@ -28,30 +28,30 @@
           </label> <input type="text" th:field="*{numerKatalogowy}" th:errorclass="fieldError" />
         </div>
         <div>
-          <label for="nominal"> <span th:text="#{klaser.nominal}">nominal</span>
-          </label> <input type="text" th:field="*{nominal}" th:errorclass="fieldError" />
-          <span th:if="${#fields.hasErrors('nominal')}" th:errors="*{nominal}">Incorrect nominal</span>
+          <label for="opisZadania"> <span th:text="opisZadania">opisZadania</span>
+          </label> <input type="text" th:field="*{opisZadania}" th:errorclass="fieldError" />
+          <span th:if="${#fields.hasErrors('opisZadania')}" th:errors="*{opisZadania}">Incorrect nominal</span>
         </div>
         <div>
-          <label for="opis"> <span th:text="#{klaser.opis}">opis</span>
-          </label> <input type="text" th:field="*{opis}" th:errorclass="fieldError" />
+          <label for="szczegoly"> <span th:text="#{klaser.szczegoly}">szczegoly</span>
+          </label> <input type="text" th:field="*{szczegoly}" th:errorclass="fieldError" />
         </div>
         <div>
-          <label for="waluta"> <span th:text="#{klaser.waluta}">waluta</span>
-          </label> <input type="text" th:field="*{waluta}" th:errorclass="fieldError" />
+          <label for="priorytet"> <span th:text="#{klaser.priorytet}">priorytet</span>
+          </label> <input type="text" th:field="*{priorytet}" th:errorclass="fieldError" />
         </div>
         <div>
-          <label for="cenaNabycia"> <span th:text="#{klaser.cenaNabycia}">cenaNabycia</span>
-          </label> <input type="text" th:field="*{cenaNabycia}" th:errorclass="fieldError" />
+          <label for="miejsceWykonania"> <span th:text="#{klaser.miejsceWykonania}">miejsceWykonania</span>
+          </label> <input type="text" th:field="*{miejsceWykonania}" th:errorclass="fieldError" />
         </div>
         <div>
-          <label for="dataNabycia"> <span th:text="#{klaser.dataNabycia}">Date kup</span> (<span
+          <label for="dataWykonania"> <span th:text="#{klaser.dataWykonania}">dataWykonania</span> (<span
             th:text="#{date.format}">YYYY/MM/DD</span>)
-          </label> <input type="text" th:field="*{dataNabycia}" th:errorclass="fieldError" />
+          </label> <input type="text" th:field="*{dataWykonania}" th:errorclass="fieldError" />
         </div>
         <div>
-          <label for="krajPochodzenia"> <span th:text="#{klaser.krajPochodzenia}">krajPochodzenia</span>
-          </label> <input type="text" th:field="*{krajPochodzenia}" th:errorclass="fieldError" />
+          <label for="czasWykonania"> <span th:text="#{klaser.kczasWykonania}">czasWykonania</span>
+          </label> <input type="text" th:field="*{czasWykonania}" th:errorclass="fieldError" />
         </div>
         <div>
           <label for="status"> <span th:text="#{klaser.status}">status</span></label>
