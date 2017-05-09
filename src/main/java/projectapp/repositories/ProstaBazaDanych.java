@@ -22,23 +22,23 @@ public class ProstaBazaDanych implements MonetyRepository {
         baza = new Moneta[15];
         Moneta m = new Moneta();
         m.setNumerKatalogowy(0L);
-        m.setKrajPochodzenia("Polska");
-        m.setNominal(1L);
-        m.setWaluta("zł");
-        m.setOpis("Ładna nowiutka złotóweczka");
-        m.setDataNabycia(new Date());
-        m.setCenaNabycia(new BigDecimal("1.2"));
-        m.setStatus(Status.NOWA);
+        m.setOpisZadania("Paca domowa");
+        m.setProrytet(1L);
+        m.setSzczegoly("na ekonomie");
+        m.setCzasWykonania("max 5 godz");
+        m.setDataWykonania(new Date());
+        m.setMiejsceWykonania("Na uczelni");
+        m.setStatus(Status.NEW);
         baza[0] = m;
         m = new Moneta();
         m.setNumerKatalogowy(2L);
-        m.setKrajPochodzenia("Polska");
-        m.setNominal(2L);
-        m.setWaluta("zł");
-        m.setOpis("Ładna nowiutka dwu złotóweczka");
-        m.setDataNabycia(new Date());
-        m.setCenaNabycia(new BigDecimal("2.2"));
-        m.setStatus(Status.DO_SPRZEDANIA);
+        m.setOpisZadania("Pojechac do mechanika");
+        m.setProrytet(2L);
+        m.setSzczegoly("nr tel : 255555");
+        m.setCzasWykonania("2 godz");
+        m.setDataWykonania(new Date());
+        m.setMiejsceWykonania("Gliwice");
+        m.setStatus(Status.DO_ZROBIENIA);
         baza[2] = m;
 
     }

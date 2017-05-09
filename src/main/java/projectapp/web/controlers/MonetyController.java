@@ -51,7 +51,7 @@ public class MonetyController {
             model.addAttribute("moneta", moneta);
             return "moneta";
         } else {
-            notifyService.addErrorMessage("Cannot find moneta #" + id);
+            notifyService.addErrorMessage("Cannot find zadanie #" + id);
             model.clear();
             return "redirect:/monety";
         }
@@ -66,7 +66,7 @@ public class MonetyController {
             Moneta moneta = result.get();
             return new ResponseEntity<Moneta>(moneta, HttpStatus.OK);
         } else {
-            notifyService.addErrorMessage("Cannot find moneta #" + id);
+            notifyService.addErrorMessage("Cannot find zadanie #" + id);
             model.clear();
             return new ResponseEntity<Moneta>(HttpStatus.NOT_FOUND);
         }
@@ -110,7 +110,7 @@ public class MonetyController {
     @RequestMapping(value = "/monety/create", method = RequestMethod.GET)
     public String showMainPages(final Moneta moneta) {
         // Ustawiamy date nowej monety, na dole strony do dodania
-        moneta.setDataNabycia(Calendar.getInstance().getTime());
+        moneta.setDataWykonania(Calendar.getInstance().getTime());
         return "moneta";
     }
 

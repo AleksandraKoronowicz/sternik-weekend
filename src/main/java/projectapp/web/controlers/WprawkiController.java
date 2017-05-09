@@ -70,9 +70,9 @@ public class WprawkiController {
             System.out.println(e.getClass().getName());
             m = new Moneta();
             m.setNumerKatalogowy(id);
-            m.setKrajPochodzenia("Polska");
-            m.setStatus(Status.NOWA);
-            m.setNominal(10L);
+            m.setOpisZadania("Polska");
+            m.setStatus(Status.DO_ZROBIENIA);
+            m.setProrytet(10L);
             try {
                 baza.create(m);
             } catch (MonetaAlreadyExistsException e1) {
