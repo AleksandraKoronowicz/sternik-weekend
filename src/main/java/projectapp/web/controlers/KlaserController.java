@@ -32,10 +32,10 @@ public class KlaserController {
     @Autowired
     private NotificationService notificationService;
 
-//    @ModelAttribute("statusyAll")
-//    public List<Status> populateStatusy() {
-//        return Arrays.asList(Status.ALL);
-//    }
+    @ModelAttribute("statusyAll")
+    public List<Status> populateStatusy() {
+       return Arrays.asList(Status.ALL);
+   }
 
     @ModelAttribute("coinsAll")
     public List<Moneta> populateCoins() {
