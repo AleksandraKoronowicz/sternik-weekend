@@ -11,14 +11,14 @@
 <body>
   <header th:replace="layout :: site-header" />
   <div>
-    <h2 th:text="#{title.list}" style="display: inline;">Listazadań</h2>
+    <h2 th:text="#{title.list}" style="display: inline;">Lista monet</h2>
   </div>
   
   <div class="listaMonet" th:unless="${#lists.isEmpty(coinsAll)}">
     <table>
       <thead>
         <tr>
-  <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
+          <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
           <th th:text="#{klaser.nominal}">nominal</th>
           <th th:text="#{klaser.opis}">opis</th>
           <th th:text="#{klaser.waluta}">waluta</th>
@@ -33,24 +33,19 @@
         <tr th:each="coin : ${coinsAll}">
           <form action="#" th:action="@{/monety}" th:object="${coin}" method="post">
           <td th:text="${coin.numerKatalogowy}">1</td>
-          <td th:text="${coin.miejsceWykonania}">100jhujk</td>
-          <td th:text="${coin.priorytet}">2</td>
-          <td th:text="${coin.szczegoly}">zł</td>
-          <td th:text="${coin.opisZadna}">uhih</td>
-          <td th:text="${coin.dataNabycia}">2011/13/01</td>
+          <td th:text="${coin.nominal}">100</td>
+          <td th:text="${coin.opis}">Długi opis</td>
+          <td th:text="${coin.waluta}">zł</td>
+          <td th:text="${{coin.cenaNabycia}}">5.12</td>
+          <td th:text="${{coin.dataNabycia}}">2011/13/01</td>
           <td th:text="${coin.krajPochodzenia}">Polska</td>
-                    <td th:text="${coin.krajPochodzenia}">Polska</td>
           <td th:text="#{${'klaser.status.' + coin.status}}">Nowa</td>
           <td>
-          
-             <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
-            th:text="#{klaser.remove}">DONE!</button>
-            
             <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
-            th:text="#{klaser.remove}">DEL</button>
+            th:text="#{klaser.remove}">Dell</button>
             
             <a href="moneta.html" th:href="@{|/monety/${coin.numerKatalogowy}|}" >
-            <button type="button" th:text="#{klaser.edit}">EDIT</button></a>              
+            <button type="button" th:text="#{klaser.edit}">Editt</button></a>              
           </td>
           </form>
         </tr>
