@@ -11,27 +11,27 @@
 <body>
   <header th:replace="layout :: site-header" />
   <div>
-    <h2 th:text="#{title.list}" style="display: inline;">Lista zadań</h2>
+    <h2 th:text="#{title.list}" style="display: inline;">Listazadań</h2>
   </div>
   
   <div class="listaMonet" th:unless="${#lists.isEmpty(coinsAll)}">
     <table>
       <thead>
         <tr>
-          <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
-          <th th:text="#{klaser.miejsceWykonania}">miejsceWykonania</th>
-          <th th:text="#{klaser.priorytet}">priorytet</th>
-          <th th:text="#{klaser.szczegoly}">szczegoly</th>
-          <th th:text="#{klaser.opisZadania}">opisZadania</th>
-          <th th:text="#{klaser.dataWykonania}">dataWykonania</th>
-          <th th:text="#{klaser.czasWyknania}">czasWyknania</th>
+  <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
+          <th th:text="#{klaser.nominal}">nominal</th>
+          <th th:text="#{klaser.opis}">opis</th>
+          <th th:text="#{klaser.waluta}">waluta</th>
+          <th th:text="#{klaser.cenaNabycia}">cenaNabycia</th>
+          <th th:text="#{klaser.dataNabycia}">dataNabycia</th>
+          <th th:text="#{klaser.krajPochodzenia}">krajPochodzenia</th>
           <th th:text="#{klaser.status}">status</th>
           <th th:text="#{klaser.operacje}">operacje</th>
         </tr>
       </thead>
       <tbody>
         <tr th:each="coin : ${coinsAll}">
-          <form action="#" th:action="@{/monety}" th:object="${moneta}" method="post">
+          <form action="#" th:action="@{/monety}" th:object="${coin}" method="post">
           <td th:text="${coin.numerKatalogowy}">1</td>
           <td th:text="${coin.miejsceWykonania}">100jhujk</td>
           <td th:text="${coin.priorytet}">2</td>
@@ -39,6 +39,7 @@
           <td th:text="${coin.opisZadna}">uhih</td>
           <td th:text="${coin.dataNabycia}">2011/13/01</td>
           <td th:text="${coin.krajPochodzenia}">Polska</td>
+                    <td th:text="${coin.krajPochodzenia}">Polska</td>
           <td th:text="#{${'klaser.status.' + coin.status}}">Nowa</td>
           <td>
           
