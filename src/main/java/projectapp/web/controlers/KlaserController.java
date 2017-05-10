@@ -42,10 +42,10 @@ public class KlaserController {
         return this.klaserService.findAll();
     }
 
-//    @ModelAttribute("coinsToSell")
-//    public List<Moneta> populateCoinsToSell() {
-//        return this.klaserService.findAllToSell();
-//    }
+   @ModelAttribute("coinsToSell")
+   public List<Moneta> populateCoinsToSell() {
+      return this.klaserService.findAllToSell();
+      }
 
 //    @ModelAttribute("coinsLast3")
 //    public List<Moneta> populateLast3Coins() {
