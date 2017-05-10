@@ -11,7 +11,7 @@
 <body>
   <header th:replace="layout :: site-header" />
   <div>
-    <h2 th:text="#{title.list}" style="display: inline;">Lista monet</h2>
+    <h2 th:text="#{title.list}" style="display: inline;">Lista zadań</h2>
   </div>
   
   <div class="listaMonet" th:unless="${#lists.isEmpty(coinsAll)}">
@@ -19,8 +19,8 @@
       <thead>
         <tr>
           <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
-          <th th:text="#{klaser.nominal}">nominal</th>
-          <th th:text="#{klaser.opis}">opis</th>
+          <th th:text="#{klaser.nominal}">Priorytet</th>
+          <th th:text="#{klaser.opis}">Opis zadania</th>
           <th th:text="#{klaser.waluta}">waluta</th>
           <th th:text="#{klaser.cenaNabycia}">cenaNabycia</th>
           <th th:text="#{klaser.dataNabycia}">dataNabycia</th>
