@@ -33,7 +33,7 @@
         <tr th:each="coin : ${coinsAll}">
           <form action="#" th:action="@{/monety}" th:object="${coins}" method="post">
           <td th:text="${coin.numerKatalogowy}">1</td>
-          <td th:text="${coin.nominal}">100</td>
+          <td th:text="${coin.priorytet}">100</td>
           <td th:text="${coin.opis}">Długi opis</td>
           <td th:text="${coin.waluta}">zł</td>
           <td th:text="${{coin.cenaNabycia}}">5.12</td>
