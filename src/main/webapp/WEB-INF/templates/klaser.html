@@ -31,12 +31,12 @@
       </thead>
       <tbody>
         <tr th:each="coin : ${coinsAll}">
-          <form action="#" th:action="@{/monety}" th:object="${coin}" method="post">
+          <form action="#" th:action="@{/monety}" th:object="${moneta}" method="post">
           <td th:text="${coin.numerKatalogowy}">1</td>
-          <td th:text="${coin.miejsceWykonania}">100</td>
+          <td th:text="${coin.miejsceWykonania}">100jhujk</td>
           <td th:text="${coin.priorytet}">2</td>
           <td th:text="${coin.szczegoly}">zł</td>
-          <td th:text="${coin.opisZadna}">5.12</td>
+          <td th:text="${coin.opisZadna}">uhih</td>
           <td th:text="${coin.dataNabycia}">2011/13/01</td>
           <td th:text="${coin.krajPochodzenia}">Polska</td>
           <td th:text="#{${'klaser.status.' + coin.status}}">Nowa</td>
