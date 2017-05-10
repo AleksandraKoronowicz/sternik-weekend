@@ -32,7 +32,7 @@ public class KlaserServiceJ8Impl implements KlaserService {
 
     @Override
     public List<Moneta> findLatest3() {
-        return monety.findAll().stream().sorted((a, b) -> b.getDataWykonania().compareTo(a.getDataWykonania())).limit(5)
+        return monety.findAll().stream().sorted((a, b) -> b.getDataNabycia().compareTo(a.getDataNabycia())).limit(5)
                 .collect(Collectors.toList());
     }
 

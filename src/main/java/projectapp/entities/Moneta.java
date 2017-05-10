@@ -9,42 +9,39 @@ import javax.xml.bind.annotation.XmlRootElement;
 //@XmlRootElement
 public class Moneta {
 
-//    @NotNull
-//    @Id
-    private Long numerKatalogowy;
+//  @NotNull
+//  @Id
+  private Long numerKatalogowy;
 	
 //	@NotNull
-	private Long priorytet;
+	private Long nominal;
 	
 	//@Size(min=2, max=30, message = "{Size.moneta.opis}")
 //	@Size(min=2, max=30, message = "Opis should be in the range [{min}...{max}]")
-	private String opisZadania;
+	private String opis;
 //	@NotEmpty
-	private String szczegoly;
+	private String waluta;
 //	@NotNull
-	private String czasWykonania;
+	private BigDecimal cenaNabycia;
 //	@NotNull
-	private Date dataWykonania;
+	private Date dataNabycia;
 //	@NotEmpty
-	private String miejsceWykonania;
+	private String krajPochodzenia;
 //	@NotNull
 	private Status status;
 
 	
 	
-	public static Moneta produceMoneta(Long numerKatalogowy, 
-			String miejsceWykonania, 
-			Long priorytet, 
-			String szczegoly, String opisZadania,
-			Date dataWykonania, String czasWykonania, Status status) {
+	public static Moneta produceMoneta(Long numerKatalogowy, String krajPochodzenia, Long nominal, String waluta, String opis,
+			Date dataNabycia, BigDecimal cenaNabycia, Status status) {
 		Moneta m = new Moneta();
 		m.numerKatalogowy = numerKatalogowy;
-		m.czasWykonania = czasWykonania;
-		m.miejsceWykonania = miejsceWykonania;
-		m.opisZadania = opisZadania;
-		m.dataWykonania = dataWykonania;
-		m.priorytet = priorytet;
-		m.szczegoly = szczegoly;
+		m.krajPochodzenia = krajPochodzenia;
+		m.nominal = nominal;
+		m.opis = opis;
+		m.waluta = waluta;
+		m.cenaNabycia = cenaNabycia;
+		m.dataNabycia = dataNabycia;
 		m.status = status;
 		return m;
 	}
@@ -53,28 +50,28 @@ public class Moneta {
 		return numerKatalogowy;
 	}
 
-	public String getMiejsceWykonania() {
-		return miejsceWykonania;
+	public Long getNominal() {
+		return nominal;
 	}
 
-	public Long getPriorytet() {
-		return priorytet;
+	public String getOpis() {
+		return opis;
 	}
 
-	public String getSzczegoly() {
-		return szczegoly;
+	public String getWaluta() {
+		return waluta;
 	}
 
-	public String getOpisZadania() {
-		return opisZadania;
+	public BigDecimal getCenaNabycia() {
+		return cenaNabycia;
 	}
 
-	public Date getDataWykonania() {
-		return dataWykonania;
+	public Date getDataNabycia() {
+		return dataNabycia;
 	}
 
-	public String getCzasWykonania() {
-		return czasWykonania;
+	public String getKrajPochodzenia() {
+		return krajPochodzenia;
 	}
 
 	public Status getStatus() {
@@ -85,28 +82,28 @@ public class Moneta {
 		this.numerKatalogowy = numerKatalogowy;
 	}
 
-	public void setMiejsceWykonania(String miejsceWykonania) {
-		this.miejsceWykonania = miejsceWykonania;
+	public void setNominal(Long nominal) {
+		this.nominal = nominal;
 	}
 
-	public void setProrytet(Long priorytet) {
-		this.priorytet = priorytet;
+	public void setOpis(String opis) {
+		this.opis = opis;
 	}
 
-	public void setSzczegoly(String szczegóły) {
-		this.szczegoly = szczegóły;
+	public void setWaluta(String waluta) {
+		this.waluta = waluta;
 	}
 
-	public void setOpisZadania(String opisZadania) {
-		this.opisZadania = opisZadania;
+	public void setCenaNabycia(BigDecimal cenaNabycia) {
+		this.cenaNabycia = cenaNabycia;
 	}
 
-	public void setDataWykonania(Date dataWykonania) {
-		this.dataWykonania = dataWykonania;
+	public void setDataNabycia(Date dataNabycia) {
+		this.dataNabycia = dataNabycia;
 	}
 
-	public void setCzasWykonania(String czasWykonania) {
-		this.czasWykonania = czasWykonania;
+	public void setKrajPochodzenia(String krajPochodzenia) {
+		this.krajPochodzenia = krajPochodzenia;
 	}
 
 	public void setStatus(Status status) {
@@ -117,14 +114,14 @@ public class Moneta {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((opisZadania == null) ? 0 : opisZadania.hashCode());
-		result = prime * result + ((miejsceWykonania == null) ? 0 : miejsceWykonania.hashCode());
-		result = prime * result + ((priorytet == null) ? 0 : priorytet.hashCode());
-		result = prime * result + ((szczegoly == null) ? 0 : szczegoly.hashCode());
-		result = prime * result + ((opisZadania == null) ? 0 : opisZadania.hashCode());
-		result = prime * result + ((dataWykonania == null) ? 0 : dataWykonania.hashCode());
+		result = prime * result + ((opis == null) ? 0 : opis.hashCode());
+		result = prime * result + ((cenaNabycia == null) ? 0 : cenaNabycia.hashCode());
+		result = prime * result + ((dataNabycia == null) ? 0 : dataNabycia.hashCode());
+		result = prime * result + ((krajPochodzenia == null) ? 0 : krajPochodzenia.hashCode());
+		result = prime * result + ((nominal == null) ? 0 : nominal.hashCode());
+		result = prime * result + ((numerKatalogowy == null) ? 0 : numerKatalogowy.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
-		result = prime * result + ((czasWykonania == null) ? 0 : czasWykonania.hashCode());
+		result = prime * result + ((waluta == null) ? 0 : waluta.hashCode());
 		return result;
 	}
 
@@ -137,30 +134,30 @@ public class Moneta {
 		if (getClass() != obj.getClass())
 			return false;
 		Moneta other = (Moneta) obj;
-		if (miejsceWykonania == null) {
-			if (other.miejsceWykonania != null)
+		if (opis == null) {
+			if (other.opis != null)
 				return false;
-		} else if (!miejsceWykonania.equals(other.miejsceWykonania))
+		} else if (!opis.equals(other.opis))
 			return false;
-		if (priorytet == null) {
-			if (other.priorytet != null)
+		if (cenaNabycia == null) {
+			if (other.cenaNabycia != null)
 				return false;
-		} else if (!priorytet.equals(other.priorytet))
+		} else if (!cenaNabycia.equals(other.cenaNabycia))
 			return false;
-		if (szczegoly == null) {
-			if (other.szczegoly != null)
+		if (dataNabycia == null) {
+			if (other.dataNabycia != null)
 				return false;
-		} else if (!szczegoly.equals(other.szczegoly))
+		} else if (!dataNabycia.equals(other.dataNabycia))
 			return false;
-		if (opisZadania == null) {
-			if (other.opisZadania != null)
+		if (krajPochodzenia == null) {
+			if (other.krajPochodzenia != null)
 				return false;
-		} else if (!opisZadania.equals(other.opisZadania))
+		} else if (!krajPochodzenia.equals(other.krajPochodzenia))
 			return false;
-		if (dataWykonania == null) {
-			if (other.dataWykonania != null)
+		if (nominal == null) {
+			if (other.nominal != null)
 				return false;
-		} else if (!dataWykonania.equals(other.dataWykonania))
+		} else if (!nominal.equals(other.nominal))
 			return false;
 		if (numerKatalogowy == null) {
 			if (other.numerKatalogowy != null)
@@ -172,19 +169,19 @@ public class Moneta {
 				return false;
 		} else if (!status.equals(other.status))
 			return false;
-		if (czasWykonania == null) {
-			if (other.czasWykonania != null)
+		if (waluta == null) {
+			if (other.waluta != null)
 				return false;
-		} else if (!czasWykonania.equals(other.czasWykonania))
+		} else if (!waluta.equals(other.waluta))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Moneta [numerKatalogowy=" + numerKatalogowy + ", miejsceWykonania=" + miejsceWykonania + ", priorytet=" + priorytet + ", szczegoly="
-				+ szczegoly + ", opisZadania=" + opisZadania + ", dataWykonania=" + dataWykonania + ", czasWykonania="
-				+ czasWykonania + ", status=" + status + "]";
+		return "Moneta [numerKatalogowy=" + numerKatalogowy + ", nominal=" + nominal + ", Opis=" + opis + ", waluta="
+				+ waluta + ", cenaNabycia=" + cenaNabycia + ", dataNabycia=" + dataNabycia + ", krajPochodzenia="
+				+ krajPochodzenia + ", status=" + status + "]";
 	}
 
 }

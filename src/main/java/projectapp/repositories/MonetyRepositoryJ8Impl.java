@@ -20,15 +20,15 @@ public class MonetyRepositoryJ8Impl implements MonetyRepository {
 
     private List<Moneta> monety = new ArrayList<Moneta>() {
         {
-            add(Moneta.produceMoneta(1L, "Polska", 1L, "zł", "Ładna nowiutka złotóweczka", new Date(), "2",
-                    Status.NEW));
-            add(Moneta.produceMoneta(2L, "Polska", 1L, "zł", "First Moneta", new Date(), "2 godziny",Status.DO_ZROBIENIA));
-            add(Moneta.produceMoneta(3L, "Polska", 1L, "zł", "Second Moneta", new Date(), "2 godziny", Status.ANULOWANE));
-            add(Moneta.produceMoneta(4L, "Polska", 1L, "zł", "Forth Moneta", new Date(), "2 godziny",
-                    Status.ZROBIONE));
-            add(Moneta.produceMoneta(5L, "Polska", 1L, "zł", "Moneta Number 5", new Date(), "2 godziny", Status.DO_ZROBIENIA));
-            add(Moneta.produceMoneta(6L, "Polska", 1L, "zł", "Sixth Moneta", new Date(), "2 godziny", Status.NEW));
-        }
+        	  add(Moneta.produceMoneta(1L, "Polska", 1L, "zł", "Ładna nowiutka złotóweczka", new Date(), new BigDecimal("1.2"),
+                      Status.ANULOWANE));
+              add(Moneta.produceMoneta(2L, "Polska", 1L, "zł", "First Moneta", new Date(), new BigDecimal("1.2"),
+                      Status.DO_ZROBIENIA));
+              add(Moneta.produceMoneta(3L, "Polska", 1L, "zł", "Second Moneta", new Date(), new BigDecimal("1.2"), Status.NEW));
+              add(Moneta.produceMoneta(4L, "Polska", 1L, "zł", "Forth Moneta", new Date(), new BigDecimal("1.2"),
+                      Status.NEW));
+              add(Moneta.produceMoneta(5L, "Polska", 1L, "zł", "Moneta Number 5", new Date(), new BigDecimal("1.2"), Status.ANULOWANE));
+              add(Moneta.produceMoneta(6L, "Polska", 1L, "zł", "Sixth Moneta", new Date(), new BigDecimal("1.2"), Status.NEW));        }
     };
 
     @Override
