@@ -72,7 +72,7 @@ public class WprawkiController {
             m.setNumerKatalogowy(id);
             m.setKrajPochodzenia("Polska");
             m.setStatus(Status.NEW);
-            m.setpriorytet(10L);
+            m.setNominal(10L);
             try {
                 baza.create(m);
             } catch (MonetaAlreadyExistsException e1) {
