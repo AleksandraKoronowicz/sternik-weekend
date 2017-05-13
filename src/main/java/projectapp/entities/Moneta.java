@@ -11,99 +11,99 @@ public class Moneta {
 
 //  @NotNull
 //  @Id
-  private Long numerKatalogowy;
+  private Long numerPorzadkowy;
 	
 //	@NotNull
 	private Long priorytet;
 	
-	//@Size(min=2, max=30, message = "{Size.moneta.opis}")
-//	@Size(min=2, max=30, message = "Opis should be in the range [{min}...{max}]")
-	private String opis;
+	//@Size(min=2, max=30, message = "{Size.moneta.opisZadania}")
+//	@Size(min=2, max=30, message = "opisZadania should be in the range [{min}...{max}]")
+	private String opisZadania;
 //	@NotEmpty
-	private String waluta;
+	private String miejsceWykonania;
 //	@NotNull
-	private BigDecimal cenaNabycia;
+	private BigDecimal czasRealizacji;
 //	@NotNull
-	private Date dataNabycia;
+	private Date dataRealizacji;
 //	@NotEmpty
-	private String krajPochodzenia;
+	private String dodatkoweInformacje;
 //	@NotNull
 	private Status status;
 
 	
 	
-	public static Moneta produceMoneta(Long numerKatalogowy, String krajPochodzenia, Long priorytet, String waluta, String opis,
-			Date dataNabycia, BigDecimal cenaNabycia, Status status) {
+	public static Moneta produceMoneta(Long numerPorzadkowy, String dodatkoweInformacje, Long priorytet, String miejsceWykonania, String opisZadania,
+			Date dataRealizacji, BigDecimal czasRealizacji, Status status) {
 		Moneta m = new Moneta();
-		m.numerKatalogowy = numerKatalogowy;
-		m.krajPochodzenia = krajPochodzenia;
+		m.numerPorzadkowy = numerPorzadkowy;
+		m.dodatkoweInformacje = dodatkoweInformacje;
 		m.priorytet = priorytet;
-		m.opis = opis;
-		m.waluta = waluta;
-		m.cenaNabycia = cenaNabycia;
-		m.dataNabycia = dataNabycia;
+		m.opisZadania = opisZadania;
+		m.miejsceWykonania = miejsceWykonania;
+		m.czasRealizacji = czasRealizacji;
+		m.dataRealizacji = dataRealizacji;
 		m.status = status;
 		return m;
 	}
 
-	public Long getNumerKatalogowy() {
-		return numerKatalogowy;
+	public Long getNumerPorzadkowy() {
+		return numerPorzadkowy;
 	}
 
 	public Long getPriorytet() {
 		return priorytet;
 	}
 
-	public String getOpis() {
-		return opis;
+	public String getOpisZadania() {
+		return opisZadania;
 	}
 
-	public String getWaluta() {
-		return waluta;
+	public String getMiejsceWykonania() {
+		return miejsceWykonania;
 	}
 
-	public BigDecimal getCenaNabycia() {
-		return cenaNabycia;
+	public BigDecimal getCzasRealizacji() {
+		return czasRealizacji;
 	}
 
-	public Date getDataNabycia() {
-		return dataNabycia;
+	public Date getdataRealizacji() {
+		return dataRealizacji;
 	}
 
-	public String getKrajPochodzenia() {
-		return krajPochodzenia;
+	public String getDodatkoweInformacje() {
+		return dodatkoweInformacje;
 	}
 
 	public Status getStatus() {
 		return status;
 	}
 
-	public void setNumerKatalogowy(Long numerKatalogowy) {
-		this.numerKatalogowy = numerKatalogowy;
+	public void setNumerPorzadkowy(Long numerPorzadkowy) {
+		this.numerPorzadkowy = numerPorzadkowy;
 	}
 
 	public void setPriorytet(Long priorytet) {
 		this.priorytet = priorytet;
 	}
 
-	public void setOpis(String opis) {
-		this.opis = opis;
+	public void setoOisZadania(String opisZadania) {
+		this.opisZadania = opisZadania;
 	}
 
-	public void setWaluta(String waluta) {
-		this.waluta = waluta;
+	public void setMiejsceWykonania(String miejsceWykonania) {
+		this.miejsceWykonania = miejsceWykonania;
 	}
 
-	public void setCenaNabycia(BigDecimal cenaNabycia) {
-		this.cenaNabycia = cenaNabycia;
+	public void setCzasRealizacji(BigDecimal czasRealizacji) {
+		this.czasRealizacji = czasRealizacji;
 	}
 
-	public void setDataNabycia(Date dataNabycia) {
-		this.dataNabycia = dataNabycia;
+	public void setDataRealizacji(Date dataRealizacji) {
+		this.dataRealizacji = dataRealizacji;
 	}
 
-	public void setKrajPochodzenia(String krajPochodzenia) {
-		this.krajPochodzenia = krajPochodzenia;
+	public void setDodatkoweInformacje(String dodatkoweInformacje) {
+		this.dodatkoweInformacje = dodatkoweInformacje;
 	}
 
 	public void setStatus(Status status) {
@@ -114,14 +114,14 @@ public class Moneta {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((opis == null) ? 0 : opis.hashCode());
-		result = prime * result + ((cenaNabycia == null) ? 0 : cenaNabycia.hashCode());
-		result = prime * result + ((dataNabycia == null) ? 0 : dataNabycia.hashCode());
-		result = prime * result + ((krajPochodzenia == null) ? 0 : krajPochodzenia.hashCode());
+		result = prime * result + ((opisZadania == null) ? 0 : opisZadania.hashCode());
+		result = prime * result + ((czasRealizacji == null) ? 0 : czasRealizacji.hashCode());
+		result = prime * result + ((dataRealizacji == null) ? 0 : dataRealizacji.hashCode());
+		result = prime * result + ((dodatkoweInformacje == null) ? 0 : dodatkoweInformacje.hashCode());
 		result = prime * result + ((priorytet == null) ? 0 : priorytet.hashCode());
-		result = prime * result + ((numerKatalogowy == null) ? 0 : numerKatalogowy.hashCode());
+		result = prime * result + ((numerPorzadkowy == null) ? 0 : numerPorzadkowy.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
-		result = prime * result + ((waluta == null) ? 0 : waluta.hashCode());
+		result = prime * result + ((miejsceWykonania == null) ? 0 : miejsceWykonania.hashCode());
 		return result;
 	}
 
@@ -134,54 +134,54 @@ public class Moneta {
 		if (getClass() != obj.getClass())
 			return false;
 		Moneta other = (Moneta) obj;
-		if (opis == null) {
-			if (other.opis != null)
+		if (opisZadania == null) {
+			if (other.opisZadania != null)
 				return false;
-		} else if (!opis.equals(other.opis))
+		} else if (!opisZadania.equals(other.opisZadania))
 			return false;
-		if (cenaNabycia == null) {
-			if (other.cenaNabycia != null)
+		if (czasRealizacji == null) {
+			if (other.czasRealizacji != null)
 				return false;
-		} else if (!cenaNabycia.equals(other.cenaNabycia))
+		} else if (!czasRealizacji.equals(other.czasRealizacji))
 			return false;
-		if (dataNabycia == null) {
-			if (other.dataNabycia != null)
+		if (dataRealizacji == null) {
+			if (other.dataRealizacji != null)
 				return false;
-		} else if (!dataNabycia.equals(other.dataNabycia))
+		} else if (!dataRealizacji.equals(other.dataRealizacji))
 			return false;
-		if (krajPochodzenia == null) {
-			if (other.krajPochodzenia != null)
+		if (dodatkoweInformacje == null) {
+			if (other.dodatkoweInformacje != null)
 				return false;
-		} else if (!krajPochodzenia.equals(other.krajPochodzenia))
+		} else if (!dodatkoweInformacje.equals(other.dodatkoweInformacje))
 			return false;
 		if (priorytet == null) {
 			if (other.priorytet != null)
 				return false;
 		} else if (!priorytet.equals(other.priorytet))
 			return false;
-		if (numerKatalogowy == null) {
-			if (other.numerKatalogowy != null)
+		if (numerPorzadkowy == null) {
+			if (other.numerPorzadkowy != null)
 				return false;
-		} else if (!numerKatalogowy.equals(other.numerKatalogowy))
+		} else if (!numerPorzadkowy.equals(other.numerPorzadkowy))
 			return false;
 		if (status == null) {
 			if (other.status != null)
 				return false;
 		} else if (!status.equals(other.status))
 			return false;
-		if (waluta == null) {
-			if (other.waluta != null)
+		if (miejsceWykonania == null) {
+			if (other.miejsceWykonania != null)
 				return false;
-		} else if (!waluta.equals(other.waluta))
+		} else if (!miejsceWykonania.equals(other.miejsceWykonania))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Moneta [numerKatalogowy=" + numerKatalogowy + ", priorytet=" + priorytet + ", Opis=" + opis + ", waluta="
-				+ waluta + ", cenaNabycia=" + cenaNabycia + ", dataNabycia=" + dataNabycia + ", krajPochodzenia="
-				+ krajPochodzenia + ", status=" + status + "]";
+		return "Moneta [numerPorzadkowy=" + numerPorzadkowy + ", priorytet=" + priorytet + ", opisZadania=" + opisZadania + ", miejsceWykonania="
+				+ miejsceWykonania + ", czasRealizacji=" + czasRealizacji + ", dataRealizacji=" + dataRealizacji + ", dodatkoweInformacje="
+				+ dodatkoweInformacje + ", status=" + status + "]";
 	}
 
 }

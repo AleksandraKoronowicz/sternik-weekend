@@ -21,24 +21,24 @@ public class ProstaBazaDanych implements MonetyRepository {
     public ProstaBazaDanych() {
     	baza = new Moneta[15];
         Moneta m = new Moneta();
-        m.setNumerKatalogowy(0L);
-        m.setKrajPochodzenia("Polska");
-        m.setPriorytet(1L);
-        m.setWaluta("zł");
-        m.setOpis("Ładna nowiutka złotóweczka");
-        m.setDataNabycia(new Date());
-        m.setCenaNabycia(new BigDecimal("1.2"));
+        m.setNumerPorzadkowy(0L);
+        m.setDodatkoweInformacje("Additional..");
+        m.setPriorytet(0L);
+        m.setMiejsceWykonania("w domu");
+        m.setoOisZadania("Umyj lodówke");
+        m.setDataRealizacji(new Date());
+        m.setCzasRealizacji(new BigDecimal("1.2"));
         m.setStatus(Status.DO_ZROBIENIA);
         baza[0] = m;
         m = new Moneta();
-        m.setNumerKatalogowy(2L);
-        m.setKrajPochodzenia("Polska");
-        m.setPriorytet(2L);
-        m.setWaluta("zł");
-        m.setOpis("Ładna nowiutka dwu złotóweczka");
-        m.setDataNabycia(new Date());
-        m.setCenaNabycia(new BigDecimal("2.2"));
-        m.setStatus(Status.ZROBIONE);
+        m.setNumerPorzadkowy(0L);
+        m.setDodatkoweInformacje("Additional..");
+        m.setPriorytet(0L);
+        m.setMiejsceWykonania("w domu");
+        m.setoOisZadania("Umyj lodówke");
+        m.setDataRealizacji(new Date());
+        m.setCzasRealizacji(new BigDecimal("1.2"));
+        m.setStatus(Status.ANULOWANE);
         baza[2] = m;
 
     }
@@ -49,15 +49,15 @@ public class ProstaBazaDanych implements MonetyRepository {
 
     @Override
     public Moneta create(Moneta moneta) throws MonetaAlreadyExistsException {
-        if (moneta.getNumerKatalogowy() != null && baza[moneta.getNumerKatalogowy().intValue()] != null) {
-            if (moneta.getNumerKatalogowy().equals(baza[moneta.getNumerKatalogowy().intValue()].getNumerKatalogowy())) {
+        if (moneta.getNumerPorzadkowy() != null && baza[moneta.getNumerPorzadkowy().intValue()] != null) {
+            if (moneta.getNumerPorzadkowy().equals(baza[moneta.getNumerPorzadkowy().intValue()].getNumerPorzadkowy())) {
                 throw new MonetaAlreadyExistsException("Już jest moneta o takim numerze.");
             }
         }
         for (int i = 0; i < baza.length; i++) {
             if (baza[i] == null) {
                 baza[i] = moneta;
-                moneta.setNumerKatalogowy((long) i);
+                moneta.setNumerPorzadkowy((long) i);
                 return moneta;
             }
         }
@@ -76,16 +76,16 @@ public class ProstaBazaDanych implements MonetyRepository {
 
     @Override
     public Moneta update(Moneta moneta) throws NoSuchMonetaException {
-        int numerKatalogowy = moneta.getNumerKatalogowy().intValue();
+        int numerKatalogowy = moneta.getNumerPorzadkowy().intValue();
         if (!sprawdzPoprawnoscNumeruKatalogowego(numerKatalogowy)) {
             throw new NoSuchMonetaException("Nie poprawny numer katologowy");
         }
 
-        Moneta m = baza[moneta.getNumerKatalogowy().intValue()];
+        Moneta m = baza[moneta.getNumerPorzadkowy().intValue()];
         if (m == null) {
             throw new NoSuchMonetaException("Brak takiej monety.");
         } else {
-            baza[moneta.getNumerKatalogowy().intValue()] = moneta;
+            baza[moneta.getNumerPorzadkowy().intValue()] = moneta;
         }
         return moneta;
     }

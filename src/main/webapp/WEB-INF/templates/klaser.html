@@ -18,12 +18,12 @@
     <table>
       <thead>
         <tr>
-          <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
+          <th th:text="#{klaser.numerKatalogowy}">numer porzadkowy</th>
           <th th:text="#{klaser.priorytet}">Priorytet</th>
-          <th th:text="#{klaser.opis}">Opis zadania</th>
-          <th th:text="#{klaser.waluta}">waluta</th>
-          <th th:text="#{klaser.cenaNabycia}">cenaNabycia</th>
-          <th th:text="#{klaser.dataNabycia}">dataNabycia</th>
+          <th th:text="#{klaser.opisZadania}">Opis zadania</th>
+          <th th:text="#{klaser.waluta}">Miejsce wykonania</th>
+          <th th:text="#{klaser.cenaNabycia}">czas realizacji (h)</th>
+          <th th:text="#{klaser.dataNabycia}">data realizacji</th>
           <th th:text="#{klaser.krajPochodzenia}">krajPochodzenia</th>
           <th th:text="#{klaser.status}">status</th>
           <th th:text="#{klaser.operacje}">operacje</th>
@@ -32,13 +32,13 @@
       <tbody>
         <tr th:each="coin : ${coinsAll}">
           <form action="#" th:action="@{/monety}" th:object="${coins}" method="post">
-          <td th:text="${coin.numerKatalogowy}">1</td>
+          <td th:text="${coin.numerPorzadkowy}">1</td>
           <td th:text="${coin.priorytet}">100</td>
-          <td th:text="${coin.opis}">Długi opis</td>
-          <td th:text="${coin.waluta}">zł</td>
-          <td th:text="${{coin.cenaNabycia}}">5.12</td>
-          <td th:text="${{coin.dataNabycia}}">2011/13/01</td>
-          <td th:text="${coin.krajPochodzenia}">Polska</td>
+          <td th:text="${coin.opisZadania}">Długi opis</td>
+          <td th:text="${coin.miejsceWykonania}">zł</td>
+          <td th:text="${{coin.czasRealizacji}}">5.12</td>
+          <td th:text="${{coin.dataRealizacji}}">2011/13/01</td>
+          <td th:text="${coin.dodatkoweInformacje}">Polska</td>
           <td th:text="#{${'klaser.status.' + coin.status}}">Nowa</td>
           <td>
             <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 

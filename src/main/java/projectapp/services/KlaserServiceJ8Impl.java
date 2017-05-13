@@ -30,10 +30,10 @@ public class KlaserServiceJ8Impl implements KlaserService {
         return monety.findAll();
     }
 
-    @Override
-    public List<Moneta> findLatest3() {
-        return monety.findAll().stream().sorted((a, b) -> b.getDataNabycia().compareTo(a.getDataNabycia())).limit(5)
-                .collect(Collectors.toList());
+   @Override
+   public List<Moneta> findLatest3() {
+      return monety.findAll().stream().sorted((a, b) -> b.getdataRealizacji().compareTo(a.getdataRealizacji())).limit(5)
+              .collect(Collectors.toList());
     }
 
     @Override
@@ -51,7 +51,7 @@ public class KlaserServiceJ8Impl implements KlaserService {
             return Optional.of(monety.create(moneta));
         } catch (MonetaAlreadyExistsException e) {
             try {
-                return Optional.of(monety.readById(moneta.getNumerKatalogowy()));
+                return Optional.of(monety.readById(moneta.getNumerPorzadkowy()));
             } catch (NoSuchMonetaException e1) {
                 return Optional.empty();
             }

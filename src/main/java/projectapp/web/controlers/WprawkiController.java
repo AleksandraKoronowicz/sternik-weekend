@@ -69,8 +69,8 @@ public class WprawkiController {
         } catch (NoSuchMonetaException e) {
             System.out.println(e.getClass().getName());
             m = new Moneta();
-            m.setNumerKatalogowy(id);
-            m.setKrajPochodzenia("Polska");
+            m.setNumerPorzadkowy(id);
+            m.setDodatkoweInformacje("Polska");
             m.setStatus(Status.NEW);
             m.setPriorytet(10L);
             try {
