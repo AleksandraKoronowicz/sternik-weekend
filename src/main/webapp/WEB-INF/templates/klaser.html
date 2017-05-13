@@ -44,6 +44,9 @@
             <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
             th:text="#{klaser.remove}">Dell</button>
             
+                  <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
+            th:text="#{klaser.done}">Done</button>
+            
             <a href="moneta.html" th:href="@{|/monety/${coin.numerKatalogowy}|}" >
             <button type="button" th:text="#{klaser.edit}">Editt</button></a>              
           </td>
