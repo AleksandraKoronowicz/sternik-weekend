@@ -66,7 +66,7 @@ public class Moneta {
 		return czasRealizacji;
 	}
 
-	public Date getdataRealizacji() {
+	public Date getDataRealizacji() {
 		return dataRealizacji;
 	}
 
@@ -86,7 +86,7 @@ public class Moneta {
 		this.priorytet = priorytet;
 	}
 
-	public void setoOisZadania(String opisZadania) {
+	public void setOpisZadania(String opisZadania) {
 		this.opisZadania = opisZadania;
 	}
 

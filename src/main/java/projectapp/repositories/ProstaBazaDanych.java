@@ -25,7 +25,7 @@ public class ProstaBazaDanych implements MonetyRepository {
         m.setDodatkoweInformacje("Additional..");
         m.setPriorytet(0L);
         m.setMiejsceWykonania("w domu");
-        m.setoOisZadania("Umyj lodówke");
+        m.setOpisZadania("Umyj lodówke");
         m.setDataRealizacji(new Date());
         m.setCzasRealizacji(new BigDecimal("1.2"));
         m.setStatus(Status.DO_ZROBIENIA);
@@ -35,7 +35,7 @@ public class ProstaBazaDanych implements MonetyRepository {
         m.setDodatkoweInformacje("Additional..");
         m.setPriorytet(0L);
         m.setMiejsceWykonania("w domu");
-        m.setoOisZadania("Umyj lodówke");
+        m.setOpisZadania("Umyj lodówke");
         m.setDataRealizacji(new Date());
         m.setCzasRealizacji(new BigDecimal("1.2"));
         m.setStatus(Status.ANULOWANE);
