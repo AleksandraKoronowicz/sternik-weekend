@@ -50,7 +50,7 @@ public class Moneta {
 		return numerKatalogowy;
 	}
 
-	public Long getpriorytet() {
+	public Long getPriorytet() {
 		return priorytet;
 	}
 
@@ -82,7 +82,7 @@ public class Moneta {
 		this.numerKatalogowy = numerKatalogowy;
 	}
 
-	public void setpriorytet(Long priorytet) {
+	public void setPriorytet(Long priorytet) {
 		this.priorytet = priorytet;
 	}
 
