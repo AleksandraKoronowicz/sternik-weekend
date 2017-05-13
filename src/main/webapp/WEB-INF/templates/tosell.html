@@ -30,7 +30,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr th:each="coin : ${coinsAll}">
+        <tr th:each="coin : ${findAllToSell}">
           <form action="#" th:action="@{/monety}" th:object="${coins}" method="post">
           <td th:text="${coin.numerPorzadkowy}">1</td>
           <td th:text="${coin.priorytet}">100</td>
