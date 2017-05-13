@@ -41,13 +41,13 @@
           <td th:text="${coin.dodatkoweInformacje}">Polska</td>
           <td th:text="#{${'klaser.status.' + coin.status}}">Nowa</td>
           <td>
-            <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
+            <button type="submit" name="remove" th:value="${coin.numerPorzadkowy}" 
             th:text="#{klaser.remove}">Dell</button>
             
-                  <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
+                  <button type="submit" name="remove" th:value="${coin.numerPorzadkowy}" 
             th:text="#{klaser.done}">Done</button>
             
-            <a href="moneta.html" th:href="@{|/monety/${coin.numerKatalogowy}|}" >
+            <a href="moneta.html" th:href="@{|/monety/${coin.numerPorzadkowy}|}" >
             <button type="button" th:text="#{klaser.edit}">Editt</button></a>              
           </td>
           </form>
