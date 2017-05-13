@@ -23,7 +23,7 @@ public class ProstaBazaDanych implements MonetyRepository {
         Moneta m = new Moneta();
         m.setNumerKatalogowy(0L);
         m.setKrajPochodzenia("Polska");
-        m.setNominal(1L);
+        m.setpriorytet(1L);
         m.setWaluta("zł");
         m.setOpis("Ładna nowiutka złotóweczka");
         m.setDataNabycia(new Date());
@@ -33,7 +33,7 @@ public class ProstaBazaDanych implements MonetyRepository {
         m = new Moneta();
         m.setNumerKatalogowy(2L);
         m.setKrajPochodzenia("Polska");
-        m.setNominal(2L);
+        m.setpriorytet(2L);
         m.setWaluta("zł");
         m.setOpis("Ładna nowiutka dwu złotóweczka");
         m.setDataNabycia(new Date());

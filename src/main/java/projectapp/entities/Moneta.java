@@ -14,7 +14,7 @@ public class Moneta {
   private Long numerKatalogowy;
 	
 //	@NotNull
-	private Long nominal;
+	private Long priorytet;
 	
 	//@Size(min=2, max=30, message = "{Size.moneta.opis}")
 //	@Size(min=2, max=30, message = "Opis should be in the range [{min}...{max}]")
@@ -32,12 +32,12 @@ public class Moneta {
 
 	
 	
-	public static Moneta produceMoneta(Long numerKatalogowy, String krajPochodzenia, Long nominal, String waluta, String opis,
+	public static Moneta produceMoneta(Long numerKatalogowy, String krajPochodzenia, Long priorytet, String waluta, String opis,
 			Date dataNabycia, BigDecimal cenaNabycia, Status status) {
 		Moneta m = new Moneta();
 		m.numerKatalogowy = numerKatalogowy;
 		m.krajPochodzenia = krajPochodzenia;
-		m.nominal = nominal;
+		m.priorytet = priorytet;
 		m.opis = opis;
 		m.waluta = waluta;
 		m.cenaNabycia = cenaNabycia;
@@ -50,8 +50,8 @@ public class Moneta {
 		return numerKatalogowy;
 	}
 
-	public Long getNominal() {
-		return nominal;
+	public Long getpriorytet() {
+		return priorytet;
 	}
 
 	public String getOpis() {
@@ -82,8 +82,8 @@ public class Moneta {
 		this.numerKatalogowy = numerKatalogowy;
 	}
 
-	public void setNominal(Long nominal) {
-		this.nominal = nominal;
+	public void setpriorytet(Long priorytet) {
+		this.priorytet = priorytet;
 	}
 
 	public void setOpis(String opis) {
@@ -118,7 +118,7 @@ public class Moneta {
 		result = prime * result + ((cenaNabycia == null) ? 0 : cenaNabycia.hashCode());
 		result = prime * result + ((dataNabycia == null) ? 0 : dataNabycia.hashCode());
 		result = prime * result + ((krajPochodzenia == null) ? 0 : krajPochodzenia.hashCode());
-		result = prime * result + ((nominal == null) ? 0 : nominal.hashCode());
+		result = prime * result + ((priorytet == null) ? 0 : priorytet.hashCode());
 		result = prime * result + ((numerKatalogowy == null) ? 0 : numerKatalogowy.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((waluta == null) ? 0 : waluta.hashCode());
@@ -154,10 +154,10 @@ public class Moneta {
 				return false;
 		} else if (!krajPochodzenia.equals(other.krajPochodzenia))
 			return false;
-		if (nominal == null) {
-			if (other.nominal != null)
+		if (priorytet == null) {
+			if (other.priorytet != null)
 				return false;
-		} else if (!nominal.equals(other.nominal))
+		} else if (!priorytet.equals(other.priorytet))
 			return false;
 		if (numerKatalogowy == null) {
 			if (other.numerKatalogowy != null)
@@ -179,7 +179,7 @@ public class Moneta {
 
 	@Override
 	public String toString() {
-		return "Moneta [numerKatalogowy=" + numerKatalogowy + ", nominal=" + nominal + ", Opis=" + opis + ", waluta="
+		return "Moneta [numerKatalogowy=" + numerKatalogowy + ", priorytet=" + priorytet + ", Opis=" + opis + ", waluta="
 				+ waluta + ", cenaNabycia=" + cenaNabycia + ", dataNabycia=" + dataNabycia + ", krajPochodzenia="
 				+ krajPochodzenia + ", status=" + status + "]";
 	}
