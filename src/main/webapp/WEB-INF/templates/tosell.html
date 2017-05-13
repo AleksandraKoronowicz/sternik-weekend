@@ -14,7 +14,7 @@
     <h2 th:text="#{title.list}" style="display: inline;">Lista zadań</h2>
   </div>
   
-  <div class="listaMonet" th:unless="${#lists.isEmpty(findAllToSell)}">
+  <div class="listaMonet" th:unless="${#lists.isEmpty(coinsToSell)}">
     <table>
       <thead>
         <tr>
@@ -30,7 +30,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr th:each="coin : ${findAllToSell}">
+        <tr th:each="coin : ${coinsToSell}">
           <form action="#" th:action="@{/monety}" th:object="${coins}" method="post">
           <td th:text="${coin.numerPorzadkowy}">1</td>
           <td th:text="${coin.priorytet}">100</td>
