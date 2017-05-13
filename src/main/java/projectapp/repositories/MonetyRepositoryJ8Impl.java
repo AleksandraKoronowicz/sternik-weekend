@@ -62,7 +62,7 @@ public class MonetyRepositoryJ8Impl implements MonetyRepository {
                 return moneta;
             }
         }
-        throw new NoSuchMonetaException("Nie ma takiej Monety: " + moneta.getNumerPorzadkowy());
+        throw new NoSuchMonetaException("Nie ma takiego zadania: " + moneta.getNumerPorzadkowy());
     }
 
     @Override
