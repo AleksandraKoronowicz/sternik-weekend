@@ -20,15 +20,15 @@ public class MonetyRepositoryJ8Impl implements MonetyRepository {
 
     private List<Moneta> monety = new ArrayList<Moneta>() {
         {
-        	  add(Moneta.produceMoneta(1L, "Wysłać maila z życzeniami", 1L, "zł", "Mail z DW do Edka i Janka", new Date(), new BigDecimal("1.2"),
+        	  add(Moneta.produceMoneta(1L, "Wysłać maila z życzeniami", 1L, "w domu", "Mail z DW do Edka i Janka", new Date(), new BigDecimal("1.2"),
                       Status.ANULOWANE));
-              add(Moneta.produceMoneta(2L, "Zadzwonić do cioci", 1L, "zł", "Ciocia Ewa ma ur", new Date(), new BigDecimal("1.2"),
+              add(Moneta.produceMoneta(2L, "Zadzwonić do cioci", 1L, "w drodze do szkoły", "Ciocia Ewa ma ur", new Date(), new BigDecimal("1.2"),
                       Status.DO_ZROBIENIA));
-              add(Moneta.produceMoneta(3L, "Kupić prezent na dzień mamy", 1L, "zł", "Kosmetyki", new Date(), new BigDecimal("1.2"), Status.NEW));
-              add(Moneta.produceMoneta(4L, "Pisz magisterkę!!", 1L, "zł", "dokończyć rozdział II", new Date(), new BigDecimal("1.2"),
+              add(Moneta.produceMoneta(3L, "Kupić prezent na dzień mamy", 1L, "Galeria H", "Kosmetyki", new Date(), new BigDecimal("1.2"), Status.NEW));
+              add(Moneta.produceMoneta(4L, "Pisz magisterkę!!", 1L, "w domu", "dokończyć rozdział II", new Date(), new BigDecimal("1.2"),
                       Status.NEW));
-              add(Moneta.produceMoneta(5L, "Rachunki na media", 1L, "zł", "58,90 zł", new Date(), new BigDecimal("1.2"), Status.ANULOWANE));
-              add(Moneta.produceMoneta(6L, "Siłownia", 1L, "zł", "zajęcia cross", new Date(), new BigDecimal("1.2"), Status.NEW));        }
+              add(Moneta.produceMoneta(5L, "Rachunki na media", 1L, "w domu", "58,90 zł", new Date(), new BigDecimal("1.2"), Status.ANULOWANE));
+              add(Moneta.produceMoneta(6L, "Siłownia", 1L, "CH Katowice", "zajęcia cross", new Date(), new BigDecimal("1.2"), Status.NEW));        }
     };
 
     @Override
